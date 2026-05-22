@@ -1,0 +1,20 @@
+composer install
+copy .env.example .env
+php artisan key:generate
+
+DB_DATABASE=omsc_fpms
+DB_USERNAME=root
+DB_PASSWORD=
+
+Create database sa phpMyAdmin
+http://localhost/phpmyadmin
+omsc_fpms
+
+php artisan migrate
+php artisan migrate:fresh --seed
+
+npm install
+npm run dev
+
+php artisan serve
+http://127.0.0.1:8000
